@@ -1,5 +1,6 @@
 import 'package:boba/components/drink_tile.dart';
 import 'package:boba/models/shop.dart';
+import 'package:boba/pages/order_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +17,7 @@ class _ShopPageState extends State<ShopPage> {
 
   // user selected a drink, go to order page
   void goToOrderPage (Drink drink) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) =>));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => OrderPage(drink: drink,),));
   }
 
   @override

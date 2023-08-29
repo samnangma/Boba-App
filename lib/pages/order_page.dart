@@ -43,46 +43,34 @@ class _OrderPageState extends State<OrderPage> {
           // sliders to customize drink
           Column(
 
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Sweet'),
-                  Expanded(
-                    child: Slider(
-                    value: sweetValue,
-                    label: sweetValue.toString(),
-                    divisions: 4,
-                    onChanged: (value) => customizeSweet(value),
-                  ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 100,
-                    color: Colors.red,
-                    child:  Text('Ice'),
-                  ),
-
-                  Expanded(
-                    child: Slider(
-                      value: iceValue,
-                      label: iceValue.toString(),
-                      divisions: 4,
-                      onChanged: (value) => customizeIce(value),
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const SizedBox (
+                      width: 100,
+                      child: Text('Sweet'),
                     ),
-                  ),
-                ],
+
+                    Expanded(
+                      child: Slider(
+                      value: sweetValue,
+                      label: sweetValue.toString(),
+                      divisions: 4,
+                      onChanged: (value) => customizeSweet(value),
+                    ),
+                    ),
+                  ],
+                ),
               ),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  const SizedBox(
                     width: 100,
-                    color: Colors.red,
                     child:Text('Pearls'),
 
                   ),
